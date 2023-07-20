@@ -13,7 +13,7 @@ const options = {
   hash: true,
   plugins: [RevealNotes],
   totalTime: 40 * 60,
-  slideNumber: true,
+  slideNumber: true, // FIXME remove in final version
 };
 
 Reveal.initialize(options);
