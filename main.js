@@ -13,6 +13,7 @@ const options = {
   hash: true,
   plugins: [RevealNotes],
   totalTime: 40 * 60,
+  slideNumber: true,
 };
 
 Reveal.initialize(options);
