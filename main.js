@@ -1,8 +1,14 @@
-import 'reveal.js/dist/reveal.css'
-import 'reveal.js/dist/theme/night.css'
+import 'reveal.js/dist/reveal.css';
+import 'reveal.js/dist/theme/night.css';
 
-import './style.css'
+import './style.css';
 
-import Reveal from 'reveal.js'
+import Reveal from 'reveal.js';
+import RevealNotes from 'reveal.js/plugin/notes/notes';
 
-Reveal.initialize({ hash: true })
+/**
+ * @type {Reveal.Options}
+ */
+const options = { hash: true, plugins: [RevealNotes], totalTime: 40 * 60 };
+
+Reveal.initialize(options);
