@@ -9,6 +9,10 @@ import RevealNotes from 'reveal.js/plugin/notes/notes';
 /**
  * @type {Reveal.Options}
  */
-const options = { hash: true, plugins: [RevealNotes], totalTime: 40 * 60 };
+const options = {
+  hash: true,
+  plugins: [RevealNotes],
+  totalTime: 40 * 60,
+};
 
 Reveal.initialize(options);

@@ -1,24 +1,69 @@
 <section>
   <h2>Langchain</h2>
   <aside class="notes">
-    simplifier l'utilisation d'un LLM en automatisant les tâches répétitives
-  </aside>
-</section>
-
-<section>Questionnaire</section>
-
-<section>
-  LLM
-
-  <aside class="notes">
     <ul>
-      <li>exemple de LLM : API OpenAI (ChatGPT)</li>
-      <li>possibilité de changer de modèle</li>
+      <li>librairie Python</li>
+      <li>simplifier l'utilisation d'un LLM</li>
+      <li>automatiser le boilerplate / tâches courantes</li>
     </ul>
   </aside>
 </section>
 
-<section>templatisation / parsing</section>
-<section>mémorisation / gestion du contexte</section>
-<section>vector database et ingestion de documents</section>
-<section>agents spécialisés</section>
+<section>
+  <h3>LLM</h3>
+
+  <p class="fragment">Modèle statistique</p>
+  <p class="fragment">Prédit le prochain mot</p>
+  <p class="fragment">Grand nombre de paramètres</p>
+
+  <aside class="notes">
+    <ul>
+      <li>exemple : Davinci OpenAI ChatGPT</li>
+      <li>appelé via une API</li>
+      <li>Lanchain ⊂ abstraction pour changer de LLM</li>
+    </ul>
+  </aside>
+</section>
+
+<section>
+  <p>Templatisation</p>
+  <p class="fragment">Parsing</p>
+</section>
+
+<section>
+  <p>Mémorisation</p>
+  <p class="fragment">Gestion du contexte</p>
+
+  <aside class="notes">
+    <ul>
+      <li>le LLM n'a pas de mémoire !</li>
+      <li>utilisation d'un contexte</li>
+    </ul>
+  </aside>
+</section>
+<section>
+  <pre>Current conversation:</pre>
+  <pre>Human: Hi, my name is Andrew</pre>
+  <pre class="fragment">AI: Hellow Andrew. How can I assist you today ?</pre>
+  <pre class="fragment">Human: What is 1+1</pre>
+  <pre class="fragment">AI: </pre>
+
+  <aside class="notes">
+    <ul>
+      <li>le contexte est enrichi à chaque question/réponse</li>
+    </ul>
+  </aside>
+</section>
+<section>
+  <p>Vector database</p>
+  <p class="fragment">Ingestion de documents</p>
+
+  <aside class="notes">
+    <ul>
+      <li>Charger et stocker différents formats</li>
+      <li>Dans une base de données spécialisée</li>
+      <li>Alimenter le contexte à l'aide du bon document</li>
+    </ul>
+  </aside>
+</section>
+<section>Agents spécialisés</section>
