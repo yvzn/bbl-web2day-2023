@@ -6,9 +6,7 @@ import './style.css';
 import Reveal from 'reveal.js';
 import RevealNotes from 'reveal.js/plugin/notes/notes';
 
-/**
- * @type {Reveal.Options}
- */
+/** @type {Reveal.Options} */
 const options = {
   hash: true,
   plugins: [RevealNotes],

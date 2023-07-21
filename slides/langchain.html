@@ -4,23 +4,31 @@
   data-background-gradient="linear-gradient(to bottom, #010727, #45140F)"
 >
   <h2>Langchain</h2>
+
+  <aside class="notes">Maxime Thoonsen</aside>
 </section>
 
 <section>
   <p>Librairie Python</p>
-  <p class="fragment">Simplifier les interactions avec un LLM</p>
-  <p class="fragment">Automatiser les tâches courantes</p>
+  <p class="fragment">Interagir avec un LLM</p>
+
+  <aside class="notes">
+    <ul>
+      <li>Automatiser les tâches courantes</li>
+    </ul>
+  </aside>
 </section>
 
 <section>
   <h3>LLM</h3>
 
   <p class="fragment">Modèle statistique pour le langage</p>
-  <p class="fragment">Prédit le prochain mot</p>
   <p class="fragment">Grand nombre de paramètres</p>
+  <p class="fragment">Prédit le prochain mot</p>
 
   <aside class="notes">
     <ul>
+      <li>le mot le plus probable à partir des mots déjà présents</li>
       <li>exemple : Davinci OpenAI ChatGPT</li>
       <li>appelé via une API</li>
     </ul>
@@ -36,6 +44,12 @@ that is delimited by triple backticks
 into {language}. 
 
 text: ```{text}```</code></pre>
+
+  <aside class="notes">
+    <ul>
+      <li>réutiliser un prompt</li>
+    </ul>
+  </aside>
 </section>
 
 <section>
@@ -45,7 +59,8 @@ text: ```{text}```</code></pre>
   <aside class="notes">
     <ul>
       <li>le LLM n'a pas de mémoire !</li>
-      <li>utilisation d'un contexte</li>
+      <li>ChatGPT sans mémoire ?</li>
+      <li>simulation grâce à l'utilisation d'un contexte</li>
     </ul>
   </aside>
 </section>
@@ -55,11 +70,12 @@ text: ```{text}```</code></pre>
   <pre>Human: Hi, my name is Andrew</pre>
   <pre class="fragment">AI: Hellow Andrew. How can I assist you today ?</pre>
   <pre class="fragment">Human: What is 1+1</pre>
-  <pre class="fragment">AI: </pre>
+  <pre class="fragment">AI: ...</pre>
 
   <aside class="notes">
     <ul>
       <li>le contexte est enrichi à chaque question/réponse</li>
+      <li>et permet au LLM de "se souvenir"</li>
     </ul>
   </aside>
 </section>
@@ -70,17 +86,17 @@ text: ```{text}```</code></pre>
 
   <aside class="notes">
     <ul>
-      <li>Charger et stocker différents formats</li>
-      <li>Dans une base de données spécialisée</li>
+      <li>Limite à la taille du contexte</li>
+      <li>Une base de données spécialisée</li>
       <li>Alimenter le contexte à l'aide du bon document</li>
+      <li>Charger et stocker différents formats</li>
     </ul>
   </aside>
 </section>
 
 <section>
-  <p>Parsing</p>
-  <p class="fragment">Agents spécialisés</p>
-  <p class="fragment">...</p>
+  <p>Parsing des réponses</p>
+  <p class="fragment">Agents spécialisés...</p>
 
   <aside class="notes">
     <ul>
