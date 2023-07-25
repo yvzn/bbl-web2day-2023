@@ -11,7 +11,18 @@ const options = {
   hash: true,
   plugins: [RevealNotes],
   totalTime: 40 * 60,
-  slideNumber: true, // FIXME remove in final version
+  progress: false,
+  slideNumber: import.meta.env.DEV,
 };
 
 Reveal.initialize(options);
+
+const registerServiceWorker = async () => {
+  try {
+    await navigator.serviceWorker.register("/sw.js");
+  } catch (error) {
+    console.error(`Registration failed with ${error}`);
+  }
+};
+
+window.addEventListener('load', registerServiceWorker);
