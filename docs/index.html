@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <title>Retour sur le Web2day 2023</title>
+  <script type="module" crossorigin src="/assets/index-e810c080.js"></script>
+  <link rel="stylesheet" href="/assets/index-18ea747e.css">
+</head>
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section data-background-image="https://raw.githubusercontent.com/yvzn/conferences/main/app/public/images/web2day.webp"
+        data-background-size="50%" data-background-gradient="linear-gradient(to bottom, #26182a, #130c2a)">
+        <h2>Web2day 2023</h2>
+      
+        <aside class="notes">
+          <ul>
+            <li>festival 3 jours début juin</li>
+            <li>10+ ans / 10 000+ participants</li>
+          </ul>
+        </aside>
+      </section>
+      
+      <section data-background-image="https://live.staticflickr.com/65535/52942175951_70565eb82f_b.jpg">
+        <aside class="notes">
+          <ul>
+            <li>sujets tech et non tech</li>
+            <li>no-code</li>
+            <li>entrepreunariat</li>
+            <li>société / santé</li>
+            <li>colle à actualité : IA, futur du travail, "we must be more"</li>
+          </ul>
+        </aside>
+      </section>      <section data-background-image="/langchain.webp" data-background-size="50%"
+        data-background-gradient="linear-gradient(to bottom, #010727, #45140F)">
+        <h2>Langchain</h2>
+      
+        <aside class="notes">
+          <ul>
+            <li>💡 je commence par un exemple de conf tech</li>
+            <li>Librairie Python + JS</li>
+            <li>Interagir avec un LLM</li>
+            <li>Automatiser les tâches courantes</li>
+          </ul>
+        </aside>
+      </section>
+      
+      <section>
+        <h3>LLM</h3>
+      
+        <p class="fragment">Modèle statistique pour le langage</p>
+        <p class="fragment">Grand nombre de paramètres</p>
+      
+        <aside class="notes">
+          <ul>
+            <li>exemple : Davinci OpenAI ChatGPT</li>
+            <li>appelé via une API</li>
+          </ul>
+        </aside>
+      </section>
+      
+      <section>
+        <pre>
+          A robot <span class="fragment">must</span> <span class="fragment">obey</span> <span class="fragment">the</span> <span class="fragment">orders</span> <span class="fragment">given</span> <span class="fragment">by</span> <span class="fragment">humans</span> <span class="fragment">except...</span>
+        </pre>
+      
+        <aside class="notes">
+          <ul>
+            <li>prédit le mot le plus probable à partir des mots déjà présents</li>
+            <li>prompt ≡ séquence de mots initiaux</li>
+          </ul>
+        </aside>
+      </section>
+      
+      <section>
+        <p>Mémorisation</p>
+        <p class="fragment">Gestion du contexte</p>
+      
+        <aside class="notes">
+          <ul>
+            <li>le LLM n'a pas de mémoire !</li>
+            <li>ChatGPT a de la mémoire ?</li>
+            <li>simulation grâce à l'utilisation d'un contexte</li>
+          </ul>
+        </aside>
+      </section>
+      
+      <section>
+        <pre>
+      Current conversation:
+      <span class="fragment">Human: Hi, my name is Andrew
+      AI: </span><span class="fragment">Hellow Andrew. How can I assist you today ?
+      Human: </span><span class="fragment">What is 1+1
+      AI: </span><span class="fragment">2
+      Human: <span class="fragment">What is my name ?
+      AI: <span class="fragment">...</span>
+      </pre>
+      
+        <aside class="notes">
+          <ul>
+            <li>le contexte du prompt est enrichi à chaque question/réponse</li>
+            <li>et permet au LLM de "se souvenir"</li>
+          </ul>
+        </aside>
+      </section>
+      
+      <section>
+        <p>Vector store</p>
+        <p class="fragment">Ingestion de documents</p>
+      
+        <aside class="notes">
+          <ul>
+            <li>Limite à la taille du contexte</li>
+            <li>Une base de données spécialisée (embeddings)</li>
+            <li>Alimenter le contexte à l'aide du bon document</li>
+            <li>Charger et stocker différents formats</li>
+          </ul>
+        </aside>
+      </section>
+      
+      <section>
+        <p>Templatisation</p>
+        <p class="fragment">Parsing des réponses</p>
+        <p class="fragment">Chaînes</p>
+        <p class="fragment">Agents spécialisés...</p>
+      
+        <aside class="notes">
+          <ul>
+            <li>réutiliser un prompt</li>
+            <li>Lanchain ⊂ abstraction pour changer de LLM</li>
+          </ul>
+        </aside>
+      </section>
+      
+      <section data-background-image="https://live.staticflickr.com/65535/52952736725_8b34594b30_h.jpg">
+        <aside class="notes">
+          <ul>
+            <li>Maxime Thoonsen</li>
+            <li>Accélérer la création de projets NLP ou généralistes</li>
+            <li>Simplifier l'expérimentation</li>
+          </ul>
+        </aside>
+      </section>      <section>
+        <h2><img src="/weweb.webp" width="64" height="64" alt="" /> WeWeb</h2>
+      
+        <video loop="" autoplay="" muted="" playsinline="" width="100%" height="auto">
+          <source src="https://cdn.weweb.io/public/videos/editor-video2.mp4" type="video/mp4" />
+        </video>
+      
+        <aside class="notes">
+          <ul>
+            <li>💡 quels usages pour Langchain / LLM ?</li>
+            <li>: création de front-ends web en no-code</li>
+          </ul>
+        </aside>
+      </section>
+      
+      <section>
+        <h3>Interroger une documentation</h3>
+      
+        <p class="fragment">Alimenter un vector store avec la FAQ</p>
+      
+        <aside class="notes">
+          <ul>
+            <li>Chatbot nouvelle génération</li>
+            <li>Rapidité de mise en oeuvre vs. avant</li>
+          </ul>
+        </aside>
+      </section>
+      
+      <section>
+        <h3>Génération de formules</h3>
+      
+        <p class="fragment">LLM spécifique dédié au code</p>
+      
+        <aside class="notes">
+          <ul>
+            <li>Approche no-code</li>
+            <li>Création de composants à partir d'un prompt</li>
+            <li>encore expérimental</li>
+          </ul>
+        </aside>
+      </section>
+      
+      
+      <section>
+        <h3>Limites</h3>
+      
+        <p class="fragment">Dépendance à OpenAI</p>
+        <p class="fragment">Qualité des réponses</p>
+      
+        <aside class="notes">
+          <ul>
+            <li>envoie de la donnée chez OpenAI</li>
+            <li>dépendance à une API externe (lenteurs, politique de prix, ...)</li>
+            <li>
+              impossible de savoir si les réponses sont bonnes... nécessite la
+              connaissance du sujet
+            </li>
+            <li>reponses hors sujet ou fausses</li>
+            <li>Compléter le contexte / modèle avec les bonnes réponses</li>
+          </ul>
+        </aside>
+      </section>
+      
+      <section>
+        <h3>REX</h3>
+      
+        <p class="fragment">Prévoir l'UX pour les erreurs</p>
+        <p class="fragment">Complète la formation</p>
+      
+        <aside class="notes">
+          <ul>
+            <li>bons retours sur la documentation et les formules</li>
+            <li>no-code vs IA</li>
+            <li>UX quand ChatGPT timeout...</li>
+            <li>limitation / quota par utilisateur pour maîtriser les coûts</li>
+            <li>ne remplace pas la formation</li>
+          </ul>
+        </aside>
+      </section>      <section
+        data-background-image="/genai.webp"
+        data-background-size="50%"
+        data-background-gradient="linear-gradient(to bottom, #231632, #5F2D26)"
+      >
+        <h2>IA générative</h2>
+      
+        <aside class="notes">
+          <ul>
+            <li>💡 quelles perspectives ?</li>
+            <li>Marie Crappe, Didier Girard</li>
+          </ul>
+        </aside>
+      </section>
+      
+      <section>
+        <p>Accélération de la recherche</p>
+        <p class="fragment">Adoption rapide du grand public</p>
+        <p class="fragment">Modèles multi-modaux</p>
+      
+        <aside class="notes">
+          <ul>
+            <li>Où en sommes nous ?</li>
+            <li>Investissements massifs</li>
+            <li>ChatGPT: 1M d'utilisateurs en 5jours</li>
+            <li>Enjeux: expérimenter les possibles, tester les outils</li>
+          </ul>
+        </aside>
+      </section>
+      
+      <section>
+        <h3>Problématiques</h3>
+      
+        <p class="fragment">Biais de représentation</p>
+        <p class="fragment">Hallucinations</p>
+      
+        <aside class="notes">
+          <ul>
+            <li>sexisme, racisme...</li>
+            <li>l'IA n'est tristement que la représentation d'internet</li>
+            <li>
+              l'IA n'aime pas "ne pas savoir" : génération de contenu plausible mais
+              inventé
+            </li>
+            <li>apporter plus de contexte pour contrôler ce qui est généré</li>
+            <li>
+              pour discerner le vrai du faux, demander à l'IA si elle est sûre de la
+              véracité
+            </li>
+          </ul>
+        </aside>
+      </section>
+      
+      <section>
+        <p>Sécurité et confidentialité</p>
+        <p class="fragment">Aspects légaux</p>
+      
+        <aside class="notes">
+          <ul>
+            <li>
+              prompt injection: contournement possible des instructions du contexte
+            </li>
+            <li>
+              procès en violation du copyright (solutions: Adobe, Open AI AP et
+              Shutterstock)
+            </li>
+            <li>AI Act européen</li>
+          </ul>
+        </aside>
+      </section>
+      
+      <section
+        data-background-image="https://live.staticflickr.com/65535/52956047185_1df13b3a48_h.jpg"
+      >
+        <aside class="notes">
+          <ul>
+            <li>Perspectives ?</li>
+            <li>Parallèle avec la calculatrice</li>
+            <li>savoir calculer était utile à nos grands parents</li>
+            <li>à nous beaucoup moins... et pour le futur ?</li>
+            <li>du temps pour traiter d'autres problématiques</li>
+          </ul>
+        </aside>
+      </section>
+      <section data-background-image="/a11y.webp" data-background-size="50%"
+        data-background-gradient="linear-gradient(to bottom, #1D3B53, #16142A)">
+        <h2>Accessibilité</h2>
+      
+        <aside class="notes">
+          <ul>
+            <li>💡 par exemple l'accessibilité</li>
+            <li>anecdote béquilles</li>
+            <li>15% de la population (temporaire / permanent)</li>
+          </ul>
+        </aside>
+      </section>
+      
+      <section>
+        <h3>Daltoniens,<br />les oubliés de l'UX</h3>
+      
+        <aside class="notes">
+          <ul>
+            <li>∃ autres conférences sur l'accessibilité</li>
+            <li>Daniel Roch</li>
+            <li>80% des handicaps sont invisibles</li>
+          </ul>
+        </aside>
+      </section>
+      
+      <section data-background-image="https://live.staticflickr.com/65535/52952350746_d622ebe3aa_h.jpg">
+        <aside class="notes">
+          <ul>
+            <li>Tout le monde est concerné par la couleur/li></li>
+            <li>Luminosité / contraste</li>
+            <li>Fatigue</li>
+            <li>Perception...</li>
+          </ul>
+        </aside>
+      </section>
+      
+      <section>
+        <p><del>Être joli pour tout le monde</del></p>
+        <p class="fragment">Être utilisable par tout le monde</p>
+      </section>
+      
+      <section>
+        <h4>La couleur ne doit pas être le seul déterminant</h4>
+      
+        <p class="fragment">Motifs, formes et textures</p>
+        <p class="fragment">Nommer</p>
+        <p class="fragment">Contraster</p>
+      
+        <aside class="notes">
+          <ul>
+            <li>déterminant pour l'utilisation: comprendre, agir...</li>
+            <li>formes : gras, pointillés...</li>
+            <li>mettre les libellés en face des pastilles de couleur, ...</li>
+          </ul>
+        </aside>
+      </section>
+      
+      <section>
+        <h3>Enjeux</h3>
+      
+        <p class="fragment">Obligation pour 2025</p>
+        <p class="fragment">15% d'utilisateurs en plus</p>
+      
+        <aside class="notes">
+          <ul>
+            <li>e-commerce: 2025 (nouveau) / 2030 (existant)</li>
+            <li>potentiel missions</li>
+            <li>
+              formation des devs. incomplète, audits accessibilité, mise à niveau
+            </li>
+            <li>en plus des enjeux éthiques, d'image, ...</li>
+          </ul>
+        </aside>
+      </section>      <section data-background-image="/freelance.webp" data-background-size="50%"
+        data-background-gradient="linear-gradient(to bottom, #643420, #332427)">
+        <h2>Freelance for good</h2>
+      
+        <aside class="notes">
+          <ul>
+            <li>💡 enjeux éthiques ?</li>
+            <li>Coline Didier, Audrey Ceyrat, Kanya Mao</li>
+            <li>
+              Freelances engagés avec des acteurs répondant aux enjeux
+              sociaux et environnementaux
+            </li>
+            <li>Répondre aux défis du 21<sup>e</sup> siecle (environnement, quête de sens)</li>
+            <li>Freelance = Plus d'impact vs. bénévolat (volume horaire)</li>
+            <li>Apporter de la valeur à une structure qui a beaucoup d'impact</li>
+          </ul>
+        </aside>
+      </section>
+      
+      <section>
+        <h3>Plusieurs modèles</h3>
+      
+        <p class="fragment">Choisir avec qui on travaille</p>
+        <p class="fragment">Choisir les missions</p>
+        <p class="fragment">Mixer missions classiques et à impact</p>
+        <p class="fragment">Intrapreunariat</p>
+      </section>
+      
+      <section>
+        <h3>Besoins du secteur de l'ESS</h3>
+      
+        <p class="fragment">Budget maîtrisé</p>
+        <p class="fragment">Expertise ponctuelle</p>
+      
+        <aside class="notes">
+          <ul>
+            <li>besoins importants (comme toutes les entreprises)</li>
+            <li>
+              freelance résoud les problématiques de budget : adaptation au besoin
+            </li>
+            <li>
+              bénéficier d'une expertise à temps partiel (vs un junior à temps plein)
+            </li>
+            <li>Enjeux intrapreunariat: Softeam / Vendredi</li>
+          </ul>
+        </aside>
+      </section>      <section data-background-image="https://live.staticflickr.com/65535/52943065419_7459cc085f_h.jpg">
+        <h2>Équité et inclusion</h2>
+        <aside class="notes">
+          <ul>
+            <li>💡 autre point à enjeu éthique</li>
+            <li>équité des salarié(e)s</li>
+            <li>respect de la différence</li>
+          </ul>
+        </aside>
+      </section>
+      
+      <section
+        data-background-image="https://media.licdn.com/dms/image/D4E12AQGLx_5mj-A69g/article-cover_image-shrink_720_1280/0/1686507408603?e=2147483647&v=beta&t=IehXWwxRqaxl5ZBHf2HP1PKOkbXtCk94_cISzu_eS8M"
+        data-background-size="75%">
+      
+        <aside class="notes">
+          <ul>
+            <li>je ne suis pas forcément le mieux placé</li>
+            <li>Marine-Pétroline Soichot, créatrice du podcast Les Chroniques du Sexisme Ordinaire</li>
+            <li>
+              conférence-spectacle : identifier le sexisme ordinaire et trouver des leviers pour le réduire
+            </li>
+            <li>l'humour comme levier de sensibilisation</li>
+            <li>Enjeux: intervention Softeam</li>
+          </ul>
+        </aside>
+      </section>
+      
+      <section data-background-image="https://live.staticflickr.com/65535/52956107528_c08fe8ef79_h.jpg">
+        <aside class="notes">
+          <ul>
+            <li>Autre intervention possible</li>
+            <li>photo du Quizz "Queer at work" </li>
+            <li>Vers une vraie égalité ?</li>
+            <li>Les avancées beneficient à tous (congé paternité ES)</li>
+          </ul>
+        </aside>
+      </section>
+      
+      <section
+        data-background-image="https://static.euronews.com/articles/stories/07/06/53/02/773x435_cmsv2_c2091f2f-368b-5f41-8679-37166bfd6996-7065302.jpg"
+        data-background-size="75%" data-background-gradient="linear-gradient(to bottom, #9ba5ba, #564b4a)">
+        <aside class="notes">
+          <ul>
+            <li>maquillage et code vestimentaire (Virgin Atlantic)</li>
+            <li>
+              uniformes genrés, tenues "masculines" très formelles vs. tenues
+              "féminines" légères
+            </li>
+          </ul>
+        </aside>
+      </section>      <section data-background-image="/end.webp" data-background-size="50%"
+        data-background-gradient="linear-gradient(to bottom, #903546, #3A0C3A)">
+        <h2>Conclusion</h2>
+      
+        <aside class="notes">
+          <ul>
+            <li>IA générative pour automatiser certaines tâches</li>
+            <li>du temps pour des problématiques plus vastes</li>
+            <li>accessibilité, égalité, inclusion</li>
+          </ul>
+        </aside>
+      </section>
+      
+      <section data-background-image="/thanks.webp" data-background-size="50%"
+        data-background-gradient="linear-gradient(140deg, #98424B, #013954)">
+        <p><img src="https://www.softeamgroup.fr/wp-content/themes/softeam/i/logo-white.png"
+            alt="Softeam, groupe Docaposte" /></p>
+      </section>    </div>
+  </div>
+  
+</body>
+
+</html>
