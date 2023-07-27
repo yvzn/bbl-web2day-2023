@@ -10,7 +10,7 @@ import RevealNotes from 'reveal.js/plugin/notes/notes';
 const options = {
   hash: true,
   plugins: [RevealNotes],
-  totalTime: 40 * 60,
+  totalTime: 45 * 60,
   progress: false,
   slideNumber: import.meta.env.DEV,
 };
@@ -19,7 +19,9 @@ Reveal.initialize(options);
 
 const registerServiceWorker = async () => {
   try {
-    await navigator.serviceWorker.register("/sw.js");
+    if (import.meta.env.PROD) {
+      await navigator.serviceWorker.register("/sw.js");
+    }
   } catch (error) {
     console.error(`Registration failed with ${error}`);
   }
